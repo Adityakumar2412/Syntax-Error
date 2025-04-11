@@ -2,32 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AJU Student ERP</title>
-  <link rel="stylesheet" href="ak.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="app-container">
-    
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Main Navigation">
       <div class="sidebar-header">
         <div class="sidebar-logo">
           <h1>AJU Student ERP</h1>
         </div>
-        <button class="sidebar-toggle">☰</button>
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar">☰</button>
       </div>
-
       <nav class="sidebar-nav">
-        <button class="nav-item active">Dashboard</button>
+        <button class="nav-item active" aria-current="page">Dashboard</button>
         <button class="nav-item">Courses</button>
         <button class="nav-item">Schedule</button>
         <button class="nav-item">Results</button>
         <button class="nav-item">Profile</button>
       </nav>
-
       <div class="sidebar-user">
-        <div class="user-avatar">A</div>
+        <div class="user-avatar" aria-label="User Avatar">A</div>
         <div class="user-info">
           <div class="user-name">Aditya</div>
           <div class="user-email">aditya@example.com</div>
@@ -41,12 +38,12 @@
         <h2>Welcome to AJU Student ERP</h2>
         <div class="header-actions">
           <div class="search-container">
-            <span class="search-icon">🔍</span>
-            <input type="text" class="search-input" placeholder="Search..." />
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." aria-label="Search" />
           </div>
-          <button class="notification-btn">
+          <button class="notification-btn" aria-label="Notifications">
             🔔
-            <span class="notification-badge"></span>
+            <span class="notification-badge">3</span>
           </button>
         </div>
       </header>
@@ -59,7 +56,7 @@
               <div class="stat-value">5</div>
               <div class="stat-trend positive">+2 this semester</div>
             </div>
-            <div class="stat-icon">📚</div>
+            <div class="stat-icon" aria-hidden="true">📚</div>
           </div>
           <div class="stat-card">
             <div>
@@ -67,12 +64,13 @@
               <div class="stat-value">92%</div>
               <div class="stat-trend positive">+1% this month</div>
             </div>
-            <div class="stat-icon">✅</div>
+            <div class="stat-icon" aria-hidden="true">✅</div>
           </div>
         </div>
       </section>
     </main>
-
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
