@@ -1,86 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AJU Student ERP</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ERP System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app-container">
-    <!-- Sidebar -->
-    <aside class="sidebar" aria-label="Main Navigation">
-      <div class="sidebar-header">
-        <div class="sidebar-logo">
-          <h1>AJU Student ERP</h1>
-        </div>
-        <button class="sidebar-toggle" aria-label="Toggle Sidebar">☰</button>
-      </div>
-      <nav class="sidebar-nav">
-        <button class="nav-item active" aria-current="page">Dashboard</button>
-        <button class="nav-item">Courses</button>
-        <button class="nav-item">Schedule</button>
-        <button class="nav-item">Results</button>
-        <button class="nav-item">Profile</button>
-      </nav>
-      <div class="sidebar-user">
-        <div class="user-avatar" aria-label="User Avatar">A</div>
-        <div class="user-info">
-          <div class="user-name">Aditya</div>
-          <div class="user-email">aditya@example.com</div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <header class="main-header">
-        <h2>Welcome to AJU Student ERP</h2>
-        <div class="header-actions">
-          <div class="search-container">
-            <span class="search-icon" aria-hidden="true">🔍</span>
-            <input type="text" class="search-input" placeholder="Search..." aria-label="Search" />
-          </div>
-          <button class="notification-btn" aria-label="Notifications">
-            🔔
-            <span class="notification-badge">3</span>
-          </button>
-        </div>
-      </header>
-
-
-      <section class="dashboard-content">
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div>
-              <div class="stat-title">Total Courses</div>
-              <div class="stat-value">5</div>
-              <div class="stat-trend positive">+2 this semester</div>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>Student ERP</h2>
             </div>
-            <div class="stat-icon" aria-hidden="true">📚</div>
-          </div>
-          <div class="stat-card">
-            <div>
-              <div class="stat-title">Attendance</div>
-              <div class="stat-value">92%</div>
-              <div class="stat-trend positive">+1% this month</div>
+            <ul class="nav-links">
+                <li class="active" data-page="dashboard"><a href="#dashboard">Dashboard</a></li>
+                <li data-page="profile"><a href="#profile">Profile</a></li>
+                <li data-page="attendance"><a href="#attendance">Attendance</a></li>
+                <li data-page="grades"><a href="#grades">Grades</a></li>
+                <li data-page="schedule"><a href="#schedule">Schedule</a></li>
+                <li data-page="fees"><a href="#fees">Fees</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="search-bar">
+                    <input type="search" placeholder="Search..." id="searchInput">
+                </div>
+                <div class="user-info">
+                    <span id="userName">John Doe</span>
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard" id="dashboardPage">
+                <h1>Welcome, <span id="welcomeName">kunal kumar</span></h1>
+                
+                <div class="cards-container">
+                    <div class="card" id="attendanceCard">
+                        <h3>Attendance</h3>
+                        <p>85%</p>
+                    </div>
+                    <div class="card" id="gpaCard">
+                        <h3>GPA</h3>
+                        <p>8.8</p>
+                    </div>
+                    <div class="card" id="testsCard">
+                        <h3>Upcoming Tests</h3>
+                        <p>2</p>
+                    </div>
+                    <div class="card" id="assignmentsCard">
+                        <h3>Assignments</h3>
+                        <p>3 Pending</p>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list" id="activityList">
+                        <div class="activity-item">
+                            <span class="activity-date">Oct 15</span>
+                            <p>Submitted Mathematics Assignment</p>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-date">Oct 14</span>
+                            <p>Attended Physics Lab</p>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-date">Oct 13</span>
+                            <p>Completed Mid-term Examination</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="stat-icon" aria-hidden="true">✅</div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-  <nav class="sidebar-nav">
-  <button class="nav-item active" aria-current="page">Dashboard</button>
-  <button class="nav-item">Courses</button>
-  <button class="nav-item">Schedule</button>
-  <button class="nav-item">Results</button>
-  <button class="nav-item">Profile</button>
-  <button class="nav-item">Library</button> <!-- ✅ New button added here -->
-</nav>
 
-
-  <script src="script.js"></script>
+            <!-- Profile Page (Initially Hidden) -->
+            <div class="page" id="profilePage" style="display: none;">
+                <h1>Student Profile</h1>
+                <div class="profile-form">
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" id="profileName" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Student ID:</label>
+                        <input type="text" id="studentId" value="STU2023001">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" id="studentEmail" value="john.doe@example.com">
+                    </div>
+                    <button onclick="updateProfile()" class="btn-update">Update Profile</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
