@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AJU Student ERP</title>
+  <link rel="stylesheet" href="ak.css" />
 </head>
 <body>
-    <h1>hello</h1>
+  <div class="app-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <h1>AJU Student ERP</h1>
+        </div>
+        <button class="sidebar-toggle">☰</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active">Dashboard</button>
+        <button class="nav-item">Courses</button>
+        <button class="nav-item">Schedule</button>
+        <button class="nav-item">Results</button>
+        <button class="nav-item">Profile</button>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-avatar">A</div>
+        <div class="user-info">
+          <div class="user-name">Aditya</div>
+          <div class="user-email">aditya@example.com</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <h2>Welcome to AJU Student ERP</h2>
+        <div class="header-actions">
+          <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search..." />
+          </div>
+          <button class="notification-btn">
+            🔔
+            <span class="notification-badge"></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="dashboard-content">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div>
+              <div class="stat-title">Total Courses</div>
+              <div class="stat-value">5</div>
+              <div class="stat-trend positive">+2 this semester</div>
+            </div>
+            <div class="stat-icon">📚</div>
+          </div>
+          <div class="stat-card">
+            <div>
+              <div class="stat-title">Attendance</div>
+              <div class="stat-value">92%</div>
+              <div class="stat-trend positive">+1% this month</div>
+            </div>
+            <div class="stat-icon">✅</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
 </body>
 </html>
